@@ -1,3 +1,5 @@
+import iconEdit from '../assets/img/pencil.png'
+
 export default function TodoList({ items, onDelete, toggleChecked, onEdit }) {
 
     function formatDate(date) {
@@ -37,7 +39,7 @@ export default function TodoList({ items, onDelete, toggleChecked, onEdit }) {
                                 </span>
 
                                 <button className="flex absolute right-9 top-3 bg-gray-100 rounded-full hover:scale-125 shadow-xl transition duration-150 cursor-pointer" onClick={() => onEdit(item)}>
-                                    <img src= 'public/{img => }/pencil.png' alt="Edit" className="" />
+                                    <img src= {iconEdit} alt="Edit" className="" />
                                 </button>
 
                                 {/* button delete */}
