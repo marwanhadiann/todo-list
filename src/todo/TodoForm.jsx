@@ -1,5 +1,6 @@
 import { useState } from "react"
 import TodoList from "./TodoList";
+import TodoFilter from "./TodoFilter";
 
 export default function TodoForm() {
     const [input, setInput] = useState('');
@@ -69,6 +70,7 @@ export default function TodoForm() {
                 <button className="bg-blue-500 rounded-full py-2 w-20 text-white hover:bg-blue-600 justify-self-center transition duration-200 delay-150 hover:scale-105 cursor-pointer">{editId ? 'Update' : 'Tambah'}</button>
             </form>
 
+            <TodoFilter/>
             <TodoList items={items} date={date} onDelete={handleDelete} toggleChecked={toggleChecked} onEdit={handleEdit} />
         </div>
     )
